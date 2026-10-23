@@ -96,3 +96,6 @@ src/
 ## 📄 Лицензия
 
 MIT
+
+## Ссылка
+https://ldplatonov.github.io/mediakomi/
