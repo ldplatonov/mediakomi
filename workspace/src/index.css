@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 2px;
+}
+
+/* Smooth transitions */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Range input styling for Firefox */
+input[type="range"]::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #26CD94;
+  border: 2px solid white;
+  box-shadow: 0 4px 6px -1px rgba(38, 205, 148, 0.3);
+  cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+  height: 12px;
+  background: #334155;
+  border-radius: 6px;
+}
+
+/* Bounce animation */
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+/* Safe area for mobile */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  footer {
+    padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* Prevent zoom on double tap */
+html {
+  touch-action: manipulation;
+}
+
+/* Image loading placeholder */
+img {
+  background-color: #1e293b;
+}
